@@ -1,7 +1,9 @@
 import { Field } from "formik";
-import { Col } from "reactstrap";
+import { FaSearch } from "react-icons/fa";
+import { Col, Form, InputGroup, InputGroupText, Label } from "reactstrap";
 import { ColumnProps } from "reactstrap/types/lib/Col";
-import { InputType } from "reactstrap/types/lib/Input";
+import Input, { InputType } from "reactstrap/types/lib/Input";
+import styled from "styled-components";
 import { AlertMensagemErro } from "../Mensagem";
 
 interface CampoFormularioProps {
@@ -58,3 +60,35 @@ export function CampoSelectFormulario(props: CampoSelectFormularioProps) {
     </Col>
   );
 }
+
+interface CampoBuscaTabelaProps {
+  value: string | number | readonly string[];
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+export function CampoBuscaTabela(props: CampoBuscaTabelaProps) {
+  return (
+    <Form className="d-flex flex-row align-items-center" onSubmit={event => event.preventDefault()}>
+      <InputBuscaArea>
+        <InputGroupText className="campo-busca-label">
+          <Label for="filter_table" className="mb-0 me-2 fw-bold form-label">Pesquisar</Label>
+          <FaSearch />
+        </InputGroupText>
+        <Input type="text" id="filter_table" value={props.value || ""} placeholder="Busca" className="campo-busca"
+          onChange={props.onChange} />
+      </InputBuscaArea>
+    </Form>
+  );
+}
+
+const InputBuscaArea = styled(InputGroup)`
+  .campo-busca-label {
+    border-end-start-radius: 50rem!important;
+    border-start-start-radius: 50rem!important;
+  }
+  
+  .campo-busca {
+    border-end-end-radius: 50rem!important;
+    border-start-end-radius: 50rem!important;
+  }
+`;

@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Col, Container, Row } from "reactstrap";
 import * as Yup from "yup";
 import { CampoFormulario, CampoSelectFormulario } from "../../components/Campo";
 import { Header } from "../../components/Header";
+import { FormTypes } from "../../types/types";
 import { classificacao_veiculo, status_veiculo } from "../../utils/listas";
 
 export function VeiculosCadastro() {
@@ -294,32 +295,6 @@ export function VeiculosCadastro() {
       </Container>
     </>
   );
-}
-
-interface FormTypes {
-  nome: string;
-  pais_origem: string;
-  status: string;
-  classificacao: string;
-  tipo: string;
-  fabricante: string;
-  utilizadores: string;
-  variantes: string;
-  quantidade_produzida: string;
-  quantidade_produzida_unidade: string;
-  periodo_servico: string;
-  massa: string;
-  massa_unidade: string;
-  comprimento: string;
-  comprimento_unidade: string;
-  altura: string;
-  altura_unidade: string;
-  largura: string;
-  largura_unidade: string;
-  tripulacao: string;
-  custo_unitario: string;
-  custo_unitario_moeda: string;
-  armamento: string;
 }
 
 const valoresIniciais: FormTypes = {
