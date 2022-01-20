@@ -1,0 +1,32 @@
+export const lista_veiculo = [
+  {
+    nome: 'M4 Sherman',
+    pais_origem: 'EUA',
+    status: 'Retirado',
+    classificacao: 'Veiculo terrestre',
+    tipo: 'Blindado medio',
+    fabricante: 'American Locomotive Company, Baldwin Locomotive Works, Detroit Tank Arsenal, Federal Machine and Welder Company, Fisher Tank Arsenal, Ford Motor Company, Lima Locomotive Works, Pacific Car and Foundry Company, Pressed Steel Car Company, Pullman-Standard Car Company',
+    utilizadores: "Argentina, Australia, Bangladesh, Belgium, Brazil, Canada, Chile, Cuba, Denmark, Egypt, Ethiopia, Free France, France, Greece, India, Iran, Israel, Italy, Indonesia, Japan, Lebanon, Mexico, Nazi Germany, Netherlands, New Zealand, Nicaragua, Pakistan, Paraguay, Peru, Philippines, Poland, Portugal, People's Republic of China, Republic of China, South Africa, South Korea, Soviet Union, Sweden, Syria, Uganda, Turkey, United Kingdom, United States, Yugoslavia",
+    variantes: 'M10 tank destroyer, M36 tank destroyer, M7 Priest self-propelled gun, M12 self-propelled gun, M40 self-propelled gun',
+    quantidade_produzida: '49,234',
+    quantidade_produzida_unidade: 'unidade',
+    periodo_servico: '1942–1957 (United States)',
+    massa: '30.3–38.1',
+    massa_unidade: 'tonnes',
+    comprimento: '5.84–6.27',
+    comprimento_unidade: 'm',
+    altura: '2.74–2.97',
+    altura_unidade: 'm',
+    largura: '2.62',
+    largura_unidade: 'm',
+    tripulacao: '5',
+    custo_unitario: '44,556–64,455',
+    custo_unitario_moeda: 'dollars',
+    armamento: '75 mm gun M3, 76 mm gun M1A1, 76 mm gun M1A1C, 76 mm gun M1A2, 105 mm howitzer M4, .50 caliber Browning M2HB machine gun, 2×.30 caliber Browning M1919A4 machine guns',
+  },
+  {
+    nome: 'T-34 76',
+    pais_origem: 'URSS',
+    tipo: 'Blindado medio',
+  }
+];
