@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useAsyncDebounce, useGlobalFilter, usePagination, useSortBy, useTable } from "react-table";
 import { Col, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledButtonDropdown } from "reactstrap";
 import styled from "styled-components";
@@ -9,6 +9,7 @@ import withReactContent from 'sweetalert2-react-content';
 import { ExibePaginaInicialFinalTabela, ExibirQuantidadeItensTabela, IrParaPaginaTabela, PaginationTabela } from "../../components/PaginationTabela";
 import { Tabela } from "../../components/Tabela";
 import { CampoBuscaTabela } from "../../components/Campo";
+import { lista_veiculo } from "../../utils/listaVeiculos";
 const SwalModal = withReactContent(Swal);
 
 interface DataTypes {
@@ -19,6 +20,10 @@ interface DataTypes {
 
 export function VeiculosLista() {
   const [dataLista, setDataLista] = useState<DataTypes[]>([]);
+
+  useEffect(() => {
+    setDataLista(lista_veiculo);
+  }, []);
 
   const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, setGlobalFilter,
     canPreviousPage, canNextPage, pageOptions, pageCount, gotoPage, nextPage, previousPage,

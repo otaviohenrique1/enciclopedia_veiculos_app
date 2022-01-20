@@ -1,8 +1,8 @@
 import { Field } from "formik";
 import { FaSearch } from "react-icons/fa";
-import { Col, Form, InputGroup, InputGroupText, Label } from "reactstrap";
+import { Col, Form, InputGroup, InputGroupText, Label, Input } from "reactstrap";
 import { ColumnProps } from "reactstrap/types/lib/Col";
-import Input, { InputType } from "reactstrap/types/lib/Input";
+import { InputType } from "reactstrap/types/lib/Input";
 import styled from "styled-components";
 import { AlertMensagemErro } from "../Mensagem";
 
